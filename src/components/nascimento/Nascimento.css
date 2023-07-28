@@ -1,0 +1,429 @@
+.nascimento {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1400px;
+  border-radius: 16px;
+  background: #171717;
+  color: #fff;
+  box-shadow: 0px 0px 15px black;
+  border: 1px dotted #fff;
+}
+.superior {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.gaveta1 {
+  border: 1px dotted #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+}
+.gaveta2 {
+  border: 1px dotted #fff;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.txtDataNasc {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+}
+.gaveta3 {
+  border: 1px dotted #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+}
+.txtEndNasc {
+  padding: 10px;
+}
+
+.interiorNascimento {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 700px;
+  width: 1400px;
+}
+.esquerda {
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.direita {
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.registroNascimento {
+  padding-top: 15px;
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  border-radius: 16px;
+  text-align: center;
+  height: 30px;
+  width: 200px;
+}
+
+.nomeNascimento {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 50px;
+  align-items: baseline;
+}
+.cpfNascimento {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 50px;
+  align-items: baseline;
+}
+.natNascimento {
+  padding-top: 8px;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  height: 50px;
+  align-items: baseline;
+}
+.ruaNascimento {
+  padding-top: 8px;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  height: 50px;
+  align-items: baseline;
+}
+.numNascimento {
+  padding-top: 8px;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  height: 50px;
+  align-items: baseline;
+}
+.bairroNascimento {
+  padding-top: 8px;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  height: 50px;
+  align-items: baseline;
+}
+
+.dataNascimento {
+  display: flex;
+  flex-direction: row;
+  border: 1px 1px 0 1px dotted #fff;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.horarioNascimento {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+div > select {
+  border-radius: 16px;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+}
+
+.txtDadosNasc {
+  padding: 25px;
+}
+
+.dadosMae {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.endMae {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input2 {
+  border-radius: 16px;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+}
+
+.dadosPai {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.endPai {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.enviar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+button {
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  .nascimento {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 1150px;
+    border-radius: 16px;
+    background: #171717;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
+    border: 1px dotted #fff;
+  }
+  .superior {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .gaveta1 {
+    border: 1px dotted #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+  }
+  .gaveta2 {
+    border: 1px dotted #fff;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+  .txtDataNasc {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+  }
+  .gaveta3 {
+    border: 1px dotted #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+  }
+  .txtEndNasc {
+    padding: 15px;
+  }
+
+  .interiorNascimento {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 600px;
+    width: 1150px;
+  }
+  .esquerda {
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .direita {
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .registroNascimento {
+    padding-top: 15px;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .input {
+    border-radius: 16px;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+  }
+
+  .nomeNascimento {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 50px;
+    align-items: baseline;
+  }
+  .cpfNascimento {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 50px;
+    align-items: baseline;
+  }
+  .natNascimento {
+    padding-top: 8px;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    height: 50px;
+    align-items: baseline;
+  }
+  .ruaNascimento {
+    padding-top: 8px;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    height: 50px;
+    align-items: baseline;
+  }
+  .numNascimento {
+    padding-top: 8px;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    height: 50px;
+    align-items: baseline;
+  }
+  .bairroNascimento {
+    padding-top: 8px;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    height: 50px;
+    align-items: baseline;
+  }
+
+  .dataNascimento {
+    display: flex;
+    flex-direction: row;
+    border: 1px 1px 0 1px dotted #fff;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  .horarioNascimento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  div > select {
+    border-radius: 16px;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+  }
+
+  .txtDadosNasc {
+    padding: 25px;
+  }
+
+  .dadosMae {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .endMae {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input2 {
+    border-radius: 16px;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+  }
+
+  .dadosPai {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .endPai {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  button {
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

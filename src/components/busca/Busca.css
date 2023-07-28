@@ -1,0 +1,491 @@
+.busca {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1250px;
+  border-radius: 16px;
+  background: #171717;
+  color: #fff;
+  box-shadow: 0px 0px 15px black;
+  border: 1px dotted #fff;
+}
+
+.txtBusca {
+  display: flex;
+  flex: 1;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pesquisa {
+  flex-direction: column;
+  display: flex;
+
+  align-items: center;
+  justify-content: start;
+}
+
+.botaoBusca {
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tabelaBusca {
+  display: flex;
+  flex: 2;
+  margin: 50px;
+  justify-content: center;
+}
+
+.tabelaBusca table {
+  font-family: Arial, sans-serif;
+  border: 1px solid #171717;
+  height: 50px;
+  width: 1000px;
+}
+
+.tabelaBusca tbody {
+  background-color: #ddd;
+  color: #171717;
+}
+.tabelaBusca thead {
+  background-color: #807d7d;
+  color: #171717;
+}
+
+.tabelaBusca tr {
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 600px;
+  height: 840px;
+  background: url(../../assets/imgs/certidão.jpg) no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  color: #171717;
+}
+
+.close {
+  font-size: 30px;
+  margin-left: 500px;
+  cursor: pointer;
+}
+
+.ajusteModal {
+  margin-left: 35px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 630px;
+  width: 490px;
+}
+
+.modalNome input {
+  width: 190px;
+  text-align: center;
+}
+
+.modalNome div {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.modalNome {
+  display: flex;
+}
+
+.modalNaturalidade {
+  height: 50px;
+  display: flex;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.modalNaturalidade input {
+  height: 20px;
+  width: 110px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.ajusteNaturalidade {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ajusteBeneficio {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalNaturalidade div {
+  display: flex;
+  width: 100%;
+}
+
+.modalEnderecoObito {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.modalData {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.modalData input {
+  margin-left: 5px;
+  text-align: center;
+  width: 100px;
+}
+
+.modalData select {
+  margin-left: 15px;
+  width: 150px;
+}
+
+.modelBotoes {
+  display: flex;
+  justify-content: center;
+}
+
+.modelEspaco {
+  height: 20px;
+  width: 100%;
+}
+
+.modelEndereco {
+  flex-direction: column;
+  display: flex;
+  height: 80px;
+}
+
+.modelEndereco input {
+  text-align: center;
+  width: 150px;
+}
+
+.modelEndereco div {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.ajusteModal h2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.modalMaePai input {
+  margin-left: 5px;
+}
+
+.modalMaePai {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ajusteModalDelete {
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 500px;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCasamento {
+  margin-left: 10px;
+}
+
+.modalCasamento div {
+  padding: 5px;
+}
+
+.modalCasamento input {
+  text-align: center;
+  margin-left: 5px;
+}
+
+@media (max-width: 1500px) {
+  .busca {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 1000px;
+    border-radius: 16px;
+    background: #171717;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
+    border: 1px dotted #fff;
+  }
+
+  .txtBusca {
+    display: flex;
+    flex: 1;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pesquisa {
+    flex-direction: column;
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+  }
+
+  .botaoBusca {
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .tabelaBusca {
+    display: flex;
+    flex: 2;
+    margin: 50px;
+    justify-content: center;
+  }
+
+  .tabelaBusca table {
+    font-family: Arial, sans-serif;
+    border: 1px solid #171717;
+    height: 50px;
+    width: 800px;
+  }
+
+  .tabelaBusca tbody {
+    background-color: #ddd;
+    color: #171717;
+  }
+  .tabelaBusca thead {
+    background-color: #807d7d;
+    color: #171717;
+  }
+
+  .tabelaBusca tr {
+    text-align: center;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 600px;
+    height: 840px;
+    background: url(../../assets/imgs/certidão.jpg) no-repeat;
+    background-size: 100%;
+    border-radius: 16px;
+    padding: 20px;
+    color: #171717;
+  }
+
+  .close {
+    font-size: 30px;
+    margin-left: 500px;
+    cursor: pointer;
+  }
+
+  .ajusteModal {
+    margin-left: 35px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 630px;
+    width: 490px;
+  }
+
+  .modalNome input {
+    width: 190px;
+    text-align: center;
+  }
+
+  .modalNome div {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    display: flex;
+    width: 100%;
+  }
+
+  .modalNome {
+    display: flex;
+  }
+
+  .modalNaturalidade {
+    height: 50px;
+    display: flex;
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  .modalNaturalidade input {
+    height: 20px;
+    width: 110px;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .ajusteNaturalidade {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ajusteBeneficio {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalNaturalidade div {
+    display: flex;
+    width: 100%;
+  }
+
+  .modalEnderecoObito {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .modalData {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .modalData input {
+    margin-left: 5px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .modalData select {
+    margin-left: 15px;
+    width: 150px;
+  }
+
+  .modelBotoes {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modelEspaco {
+    height: 20px;
+    width: 100%;
+  }
+
+  .modelEndereco {
+    flex-direction: column;
+    display: flex;
+    height: 80px;
+  }
+
+  .modelEndereco input {
+    text-align: center;
+    width: 150px;
+  }
+
+  .modelEndereco div {
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .ajusteModal h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .modalMaePai input {
+    margin-left: 5px;
+  }
+
+  .modalMaePai {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ajusteModalDelete {
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalCasamento {
+    margin-left: 10px;
+  }
+
+  .modalCasamento div {
+    padding: 5px;
+  }
+
+  .modalCasamento input {
+    text-align: center;
+    margin-left: 5px;
+  }
+}

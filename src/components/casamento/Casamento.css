@@ -1,0 +1,159 @@
+.casamento {
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+  width: 1200px;
+  border-radius: 16px;
+  background: #171717;
+  color: #fff;
+  box-shadow: 0px 0px 15px black;
+  border: 1px dotted #fff;
+}
+
+.txtCasamento {
+  padding-top: 15px;
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nubentes {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.nubente1 {
+  padding: 15px;
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nubente2 {
+  padding: 15px;
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.txtDataCas {
+  padding: 10px;
+}
+
+.dadosCasamento {
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 15px;
+}
+
+.botaoCasamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dataCasamento {
+  margin-left: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.regimeBens {
+  margin-left: 20px;
+}
+
+.txtDadosCasamento {
+  padding: 15px;
+}
+
+@media (max-width: 1500px) {
+  .casamento {
+    display: flex;
+    flex-direction: column;
+    height: 770px;
+    width: 1000px;
+    border-radius: 16px;
+    background: #171717;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
+    border: 1px dotted #fff;
+  }
+
+  .txtCasamento {
+    padding-top: 15px;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nubentes {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .nubente1 {
+    padding: 15px;
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nubente2 {
+    padding: 15px;
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .txtDataCas {
+    padding: 10px;
+  }
+
+  .dadosCasamento {
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .botaoCasamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .dataCasamento {
+    margin-left: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .regimeBens {
+    margin-left: 20px;
+  }
+
+  .txtDadosCasamento {
+    padding: 15px;
+  }
+}

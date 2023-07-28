@@ -1,0 +1,25 @@
+.Cadastro {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuCadastro {
+  height: 700px;
+  width: 500px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #171717;
+  color: #fff;
+  box-shadow: 0px 0px 15px black;
+}
+
+.selectAdmin {
+  width: 400px;
+}

@@ -1,0 +1,173 @@
+.obito {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1250px;
+  border-radius: 16px;
+  background: #171717;
+  color: #fff;
+  box-shadow: 0px 0px 15px black;
+  border: 1px dotted #fff;
+}
+
+.registroObito {
+  font-size: 30px;
+  padding-top: 15px;
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gaveta4 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.gavetao {
+  border: 1px dotted #fff;
+  flex-direction: column;
+  display: flex;
+  flex: 2;
+}
+.gaveta5 {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.gaveta6 {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.gaveta7 {
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.gaveta8 {
+  border: 1px dotted #fff;
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectCidadeObito {
+  width: 200px;
+}
+.txtEndObito {
+  padding: 15px;
+  width: 200px;
+}
+
+.txtEndObitoFalecimento {
+  padding: 5px;
+  width: 200px;
+}
+.dataNascimentoObito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1500px) {
+  .obito {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 1100px;
+    border-radius: 16px;
+    background: #171717;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
+    border: 1px dotted #fff;
+  }
+
+  .registroObito {
+    font-size: 30px;
+    padding-top: 15px;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gaveta4 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .gavetao {
+    border: 1px dotted #fff;
+    flex-direction: column;
+    display: flex;
+    flex: 2;
+  }
+  .gaveta5 {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .gaveta6 {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .gaveta7 {
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .gaveta8 {
+    border: 1px dotted #fff;
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .selectCidadeObito {
+    width: 200px;
+  }
+  .txtEndObito {
+    padding: 15px;
+    width: 200px;
+  }
+
+  .txtEndObitoFalecimento {
+    padding: 5px;
+    width: 200px;
+  }
+  .dataNascimentoObito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
