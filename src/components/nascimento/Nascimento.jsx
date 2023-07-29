@@ -124,7 +124,7 @@ export default () => {
   const handleInsert = async () => {
     try {
       await axios.post(
-        `http://localhost:3000/nascimento/inserir/`,
+        `https://registro-civil-backend.vercel.app/nascimento/inserir/`,
         selectedItem
       )
       alert("Dados inseridos com sucesso.")

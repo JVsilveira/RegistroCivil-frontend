@@ -37,7 +37,9 @@ export default () => {
       return
     }
     axios
-      .get(`http://localhost:3000/${tipo}/nome/${buscaCerta}`)
+      .get(
+        `https://registro-civil-backend.vercel.app/${tipo}/nome/${buscaCerta}`
+      )
       .then(res => {
         const data = res.data
         setData(data)
@@ -50,7 +52,7 @@ export default () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:3000/${tipo}/atualizar/${nomeCerto}`,
+        `https://registro-civil-backend.vercel.app/atualizar/${nomeCerto}`,
         selectedItem
       )
       console.log("Dados atualizados com sucesso.")
@@ -79,7 +81,7 @@ export default () => {
   const confirmedDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:3000/${tipo}/deletar/${nomeDeleteCerto}`,
+        `https://registro-civil-backend.vercel.app/${tipo}/deletar/${nomeDeleteCerto}`,
         selectedItemDelete
       )
       setTimeout(() => {

@@ -9,7 +9,10 @@ export default () => {
 
   const handleInsert = async () => {
     try {
-      await axios.post("http://localhost:3000/signup", selectedItem)
+      await axios.post(
+        "https://registro-civil-backend.vercel.app/signup",
+        selectedItem
+      )
       alert("Dados inseridos com sucesso.")
     } catch (error) {
       console.error("Erro ao inserir os dados:", error)
