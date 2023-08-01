@@ -1,6 +1,6 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
-import { AuthProvider } from "./AuthContext" // Importe o AuthProvider
+import { AuthProvider } from "./AuthContext"
 import Login from "../components/login/Login"
 import Home from "../components/home/Home"
 import Main from "../components/templates/Main"
@@ -14,75 +14,77 @@ import Cadastrar from "../components/Cadastrar/Cadastrar"
 
 export default () => {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/cadastrar" element={<Cadastrar />} />
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/cadastrar" element={<Cadastrar />} />
 
-      <Route
-        path="/Home"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Home />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
+        <Route
+          path="/Home"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Home />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
 
-      <Route
-        path="/Nascimento"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Nascimento />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
+        <Route
+          path="/Nascimento"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Nascimento />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
 
-      <Route
-        path="/Casamento"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Casamento />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
+        <Route
+          path="/Casamento"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Casamento />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
 
-      <Route
-        path="/Obito"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Obito />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
+        <Route
+          path="/Obito"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Obito />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
 
-      <Route
-        path="/Busca"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Busca />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
+        <Route
+          path="/Busca"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Busca />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
 
-      <Route
-        path="/Cadastro"
-        element={
-          <Main>
-            {/* <PrivateRoute> */}
-            <Cadastro />
-            {/* </PrivateRoute> */}
-          </Main>
-        }
-      />
-    </Routes>
+        <Route
+          path="/Cadastro"
+          element={
+            <Main>
+              {/* <PrivateRoute> */}
+              <Cadastro />
+              {/* </PrivateRoute> */}
+            </Main>
+          }
+        />
+      </Routes>
+    </AuthProvider>
   )
 }
