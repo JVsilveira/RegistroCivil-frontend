@@ -10,12 +10,14 @@ import Casamento from "../components/casamento/Casamento"
 import Obito from "../components/obito/Obito"
 import Busca from "../components/busca/Busca"
 import { PrivateRoute } from "./PrivateRoute"
+import Cadastrar from "../components/Cadastrar/Cadastrar"
 
 export default () => {
   return (
     <AuthProvider>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/cadastrar" element={<Cadastrar />} />
 
         <Route
           path="/Home"

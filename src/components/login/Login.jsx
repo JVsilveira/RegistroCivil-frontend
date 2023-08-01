@@ -8,8 +8,11 @@ export default () => {
   const [selectedItem, setSelectedItem] = useState({})
   const [error, setError] = useState(false)
   const { setToken } = useAuth()
-
   const navigate = useNavigate()
+
+  const cadastrar = async () => {
+    navigate("/cadastrar")
+  }
 
   const handleInsert = async () => {
     try {
@@ -57,9 +60,11 @@ export default () => {
           onChange={handleInputChange}
         />
         <br />
-        <button onClick={handleInsert} className="botaoLogin">
-          Acessar
-        </button>
+        <div>
+          <button onClick={cadastrar}>Cadastrar</button>
+
+          <button onClick={handleInsert}>Acessar</button>
+        </div>
         <br />
         {error && <p className="error-message">Usuário ou senha inválidos</p>}
       </div>
