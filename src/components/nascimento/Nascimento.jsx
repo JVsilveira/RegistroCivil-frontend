@@ -124,7 +124,7 @@ export default () => {
   const handleInsert = async () => {
     try {
       await axios.post(
-        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/nascimento/inserir/`,
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/nascimento/inserir`,
         selectedItem
       )
       alert("Dados inseridos com sucesso.")
