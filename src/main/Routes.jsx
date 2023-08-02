@@ -23,9 +23,9 @@ export default () => {
           path="/Home"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Home />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
             </Main>
           }
         />
@@ -34,9 +34,9 @@ export default () => {
           path="/Nascimento"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Nascimento />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Nascimento />
+              </PrivateRoute>
             </Main>
           }
         />
@@ -45,9 +45,9 @@ export default () => {
           path="/Casamento"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Casamento />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Casamento />
+              </PrivateRoute>
             </Main>
           }
         />
@@ -56,9 +56,9 @@ export default () => {
           path="/Obito"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Obito />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Obito />
+              </PrivateRoute>
             </Main>
           }
         />
@@ -67,9 +67,9 @@ export default () => {
           path="/Busca"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Busca />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Busca />
+              </PrivateRoute>
             </Main>
           }
         />
@@ -78,9 +78,9 @@ export default () => {
           path="/Cadastro"
           element={
             <Main>
-              {/* <PrivateRoute> */}
-              <Cadastro />
-              {/* </PrivateRoute> */}
+              <PrivateRoute>
+                <Cadastro />
+              </PrivateRoute>
             </Main>
           }
         />

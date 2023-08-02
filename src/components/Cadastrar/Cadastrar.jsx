@@ -26,8 +26,8 @@ export default () => {
   }
 
   return (
-    <div className="Cadastro">
-      <div className="menuCadastro">
+    <div className="Cadastrar">
+      <div className="menuCadastrar">
         <input
           type="text"
           className="inputLogin"
