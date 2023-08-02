@@ -98,7 +98,7 @@ export default () => {
   const handleInsert = async () => {
     try {
       await axios.post(
-        `https://registro-civil-backend.vercel.app/obito/inserir`,
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/obito/inserir`,
         selectedItem
       )
       alert("Dados inseridos com sucesso.")

@@ -38,7 +38,7 @@ export default () => {
     }
     axios
       .get(
-        `https://registro-civil-backend.vercel.app/${tipo}/nome/${buscaCerta}`
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/${tipo}/nome/${buscaCerta}`
       )
       .then(res => {
         const data = res.data
@@ -52,7 +52,7 @@ export default () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://registro-civil-backend.vercel.app/atualizar/${nomeCerto}`,
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/atualizar/${nomeCerto}`,
         selectedItem
       )
       console.log("Dados atualizados com sucesso.")
@@ -81,7 +81,7 @@ export default () => {
   const confirmedDelete = async () => {
     try {
       await axios.delete(
-        `https://registro-civil-backend.vercel.app/${tipo}/deletar/${nomeDeleteCerto}`,
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/${tipo}/deletar/${nomeDeleteCerto}`,
         selectedItemDelete
       )
       setTimeout(() => {
