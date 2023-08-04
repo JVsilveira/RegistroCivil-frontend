@@ -118,8 +118,6 @@ export default () => {
     setShowInput(value === "true")
   }
 
-  console.log(selectedItem)
-
   return (
     <>
       <div className="ajustePag">

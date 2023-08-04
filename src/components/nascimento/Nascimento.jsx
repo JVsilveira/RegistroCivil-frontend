@@ -132,6 +132,8 @@ export default () => {
       console.error("Erro ao inserir os dados:", error)
     }
   }
+  console.log(selectedItem)
+
   useEffect(() => {
     fetchEstados()
     fetchEstados2()
@@ -142,142 +144,43 @@ export default () => {
   return (
     <>
       <div className="ajustePag">
-        <form>
-          <div className="nascimento">
-            <p className="registroNascimento">Registro de Nascimento</p>
-            <div className="superior">
-              <div className="gaveta1">
-                <p className="txtDadosNasc">Dados do Registrado:</p>
-                <div className="nomeNascimento">
-                  <input
-                    onChange={handleInputChange}
-                    type="text"
-                    className="input"
-                    size="40"
-                    name="nome"
-                    placeholder="Nome"
-                  />
-                </div>
-                <div className="cpfNascimento">
-                  <input
-                    onChange={handleInputChange}
-                    type="text"
-                    className="input"
-                    size="11"
-                    name="CPF"
-                    placeholder="CPF"
-                  />
-                </div>
-                <div className="natNascimento">
-                  <div className="selectEstado">
-                    <select
-                      name="natUf"
-                      className="input"
-                      onChange={e => {
-                        handleInputChange(e)
-                        handleEstadoSelect(e)
-                      }}
-                    >
-                      <option>Naturalidade: Estado</option>
-                      {estados.map(estado => (
-                        <option
-                          key={estado.id}
-                          value={estado.nome}
-                          data-id={estado.id}
-                        >
-                          {estado.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="selectCidade">
-                    <select
-                      className="input"
-                      onChange={handleInputChange}
-                      name="natCidade"
-                    >
-                      <option>Naturalidade: cidade</option>
-                      {cidades.map(cidade => (
-                        <option
-                          key={cidade.id}
-                          value={cidade.nome}
-                          data-id={cidade.id}
-                        >
-                          {cidade.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+        <div className="nascimento">
+          <p className="registroNascimento">Registro de Nascimento</p>
+          <div className="superior">
+            <div className="gaveta1">
+              <p className="txtDadosNasc">Dados do Registrado:</p>
+              <div className="nomeNascimento">
+                <input
+                  onChange={handleInputChange}
+                  type="text"
+                  className="input"
+                  size="40"
+                  name="nome"
+                  placeholder="Nome"
+                />
               </div>
-              <div className="gaveta2">
-                <div className="dataNascimento">
-                  <p className="txtDataNasc">Data de nascimento: </p>
-                  <div className="diaNascimento">
-                    <input
-                      type="date"
-                      className="input"
-                      size="40"
-                      placeholder="Dia"
-                      name="dataNascimento"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                </div>
-                <div className="horarioNascimento">
-                  <input
-                    type="time"
-                    className="input"
-                    name="hora"
-                    size="40"
-                    onChange={handleInputChange}
-                  />
-                </div>
+              <div className="cpfNascimento">
+                <input
+                  onChange={handleInputChange}
+                  type="text"
+                  className="input"
+                  size="11"
+                  name="CPF"
+                  placeholder="CPF"
+                />
               </div>
-              <div className="gaveta3">
-                <p className="txtEndNasc">Endereço do registrado:</p>
-                <div className="ruaNascimento">
-                  <input
-                    type="text"
-                    className="input"
-                    size="40"
-                    placeholder="Rua"
-                    name="rua"
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="numNascimento">
-                  <input
-                    type="text"
-                    name="num"
-                    className="input"
-                    size="40"
-                    placeholder="Número"
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="bairroNascimento">
-                  <input
-                    type="text"
-                    className="input"
-                    size="40"
-                    name="bairro"
-                    placeholder="Bairro"
-                    onChange={handleInputChange}
-                  />
-                </div>
+              <div className="natNascimento">
                 <div className="selectEstado">
                   <select
-                    id="estadoSelect"
-                    name="uf"
+                    name="natUf"
                     className="input"
                     onChange={e => {
                       handleInputChange(e)
-                      handleEstadoSelect2(e)
+                      handleEstadoSelect(e)
                     }}
                   >
                     <option>Naturalidade: Estado</option>
-                    {estados2.map(estado => (
+                    {estados.map(estado => (
                       <option
                         key={estado.id}
                         value={estado.nome}
@@ -292,10 +195,10 @@ export default () => {
                   <select
                     className="input"
                     onChange={handleInputChange}
-                    name="cidade"
+                    name="natCidade"
                   >
                     <option>Naturalidade: cidade</option>
-                    {cidades2.map(cidade => (
+                    {cidades.map(cidade => (
                       <option
                         key={cidade.id}
                         value={cidade.nome}
@@ -308,219 +211,316 @@ export default () => {
                 </div>
               </div>
             </div>
-
-            <div className="interiorNascimento">
-              <div className="esquerda">
-                Dados da Mãe
-                <div className="dadosMae">
-                  <div className="nomeMaeNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Mãe"
-                      name="nomeMae"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="nomeAvoM">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Avó Materna"
-                      onChange={handleInputChange}
-                      name="maeMae"
-                    />
-                  </div>
-                  <div className="nomeAvoM">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Avô Materno"
-                      onChange={handleInputChange}
-                      name="paiMae"
-                    />
-                  </div>
-                </div>
-                <div className="endMae">
-                  <div className="ruaMaeNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Rua"
-                      onChange={handleInputChange}
-                      name="ruaMae"
-                    />
-                  </div>
-                  <div className="numMaeNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Número"
-                      onChange={handleInputChange}
-                      name="numMae"
-                    />
-                  </div>
-                  <div className="bairroMaeNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Bairro"
-                      name="bairroMae"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="selectEstado">
-                    <select
-                      id="estadoSelect"
-                      name="ufMae"
-                      onChange={e => {
-                        handleInputChange(e)
-                        handleEstadoSelect3(e)
-                      }}
-                    >
-                      <option>Naturalidade: Estado</option>
-                      {estados3.map(estado => (
-                        <option
-                          key={estado.id}
-                          value={estado.nome}
-                          data-id={estado.id}
-                        >
-                          {estado.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="selectCidade">
-                    <select onChange={handleInputChange} name="cidadeMae">
-                      <option>Naturalidade: cidade</option>
-                      {cidades3.map(cidade => (
-                        <option
-                          key={cidade.id}
-                          value={cidade.nome}
-                          data-id={cidade.id}
-                        >
-                          {cidade.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+            <div className="gaveta2">
+              <div className="dataNascimento">
+                <p className="txtDataNasc">Data de nascimento: </p>
+                <div className="diaNascimento">
+                  <input
+                    type="date"
+                    className="input"
+                    size="40"
+                    placeholder="Dia"
+                    name="dataNascimento"
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
-              <div className="direita">
-                Dados do Pai
-                <div className="dadosPai">
-                  <div className="nomePaiNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Pai"
-                      name="nomePai"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="nomeAvoP">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      name="maePai"
-                      placeholder="Avó Paterna"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="nomeAvoP1">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      name="paiPai"
-                      placeholder="Avô Paterno"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                </div>
-                <div className="endPai">
-                  <div className="ruaPaiNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      name="ruaPai"
-                      placeholder="Rua"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="numPaiNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      placeholder="Número"
-                      name="numPai"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="bairroPaiNasc">
-                    <input
-                      type="text"
-                      className="input2"
-                      size="40"
-                      name="bairroPai"
-                      placeholder="Bairro"
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                  <div className="selectEstado">
-                    <select
-                      id="estadoSelect"
-                      name="ufPai"
-                      onChange={e => {
-                        handleInputChange(e)
-                        handleEstadoSelect4(e)
-                      }}
-                    >
-                      <option>Naturalidade: Estado</option>
-                      {estados4.map(estado => (
-                        <option
-                          key={estado.id}
-                          value={estado.nome}
-                          data-id={estado.id}
-                        >
-                          {estado.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="selectCidade">
-                    <select onChange={handleInputChange} name="cidadePai">
-                      <option>Naturalidade: cidade</option>
-                      {cidades4.map(cidade => (
-                        <option
-                          key={cidade.id}
-                          value={cidade.nome}
-                          data-id={cidade.id}
-                        >
-                          {cidade.nome}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+              <div className="horarioNascimento">
+                <input
+                  type="time"
+                  className="input"
+                  name="hora"
+                  size="40"
+                  onChange={handleInputChange}
+                />
               </div>
             </div>
-
-            <div className="enviar">
-              <button onClick={handleInsert}> Enviar</button>
+            <div className="gaveta3">
+              <p className="txtEndNasc">Endereço do registrado:</p>
+              <div className="ruaNascimento">
+                <input
+                  type="text"
+                  className="input"
+                  size="40"
+                  placeholder="Rua"
+                  name="rua"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="numNascimento">
+                <input
+                  type="text"
+                  name="num"
+                  className="input"
+                  size="40"
+                  placeholder="Número"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="bairroNascimento">
+                <input
+                  type="text"
+                  className="input"
+                  size="40"
+                  name="bairro"
+                  placeholder="Bairro"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="selectEstado">
+                <select
+                  id="estadoSelect"
+                  name="uf"
+                  className="input"
+                  onChange={e => {
+                    handleInputChange(e)
+                    handleEstadoSelect2(e)
+                  }}
+                >
+                  <option>Naturalidade: Estado</option>
+                  {estados2.map(estado => (
+                    <option
+                      key={estado.id}
+                      value={estado.nome}
+                      data-id={estado.id}
+                    >
+                      {estado.nome}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="selectCidade">
+                <select
+                  className="input"
+                  onChange={handleInputChange}
+                  name="cidade"
+                >
+                  <option>Naturalidade: cidade</option>
+                  {cidades2.map(cidade => (
+                    <option
+                      key={cidade.id}
+                      value={cidade.nome}
+                      data-id={cidade.id}
+                    >
+                      {cidade.nome}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
-        </form>
+
+          <div className="interiorNascimento">
+            <div className="esquerda">
+              Dados da Mãe
+              <div className="dadosMae">
+                <div className="nomeMaeNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Mãe"
+                    name="nomeMae"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="nomeAvoM">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Avó Materna"
+                    onChange={handleInputChange}
+                    name="maeMae"
+                  />
+                </div>
+                <div className="nomeAvoM">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Avô Materno"
+                    onChange={handleInputChange}
+                    name="paiMae"
+                  />
+                </div>
+              </div>
+              <div className="endMae">
+                <div className="ruaMaeNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Rua"
+                    onChange={handleInputChange}
+                    name="ruaMae"
+                  />
+                </div>
+                <div className="numMaeNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Número"
+                    onChange={handleInputChange}
+                    name="numMae"
+                  />
+                </div>
+                <div className="bairroMaeNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Bairro"
+                    name="bairroMae"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="selectEstado">
+                  <select
+                    id="estadoSelect"
+                    name="ufMae"
+                    onChange={e => {
+                      handleInputChange(e)
+                      handleEstadoSelect3(e)
+                    }}
+                  >
+                    <option>Naturalidade: Estado</option>
+                    {estados3.map(estado => (
+                      <option
+                        key={estado.id}
+                        value={estado.nome}
+                        data-id={estado.id}
+                      >
+                        {estado.nome}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="selectCidade">
+                  <select onChange={handleInputChange} name="cidadeMae">
+                    <option>Naturalidade: cidade</option>
+                    {cidades3.map(cidade => (
+                      <option
+                        key={cidade.id}
+                        value={cidade.nome}
+                        data-id={cidade.id}
+                      >
+                        {cidade.nome}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div className="direita">
+              Dados do Pai
+              <div className="dadosPai">
+                <div className="nomePaiNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Pai"
+                    name="nomePai"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="nomeAvoP">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    name="maePai"
+                    placeholder="Avó Paterna"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="nomeAvoP1">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    name="paiPai"
+                    placeholder="Avô Paterno"
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+              <div className="endPai">
+                <div className="ruaPaiNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    name="ruaPai"
+                    placeholder="Rua"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="numPaiNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    placeholder="Número"
+                    name="numPai"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="bairroPaiNasc">
+                  <input
+                    type="text"
+                    className="input2"
+                    size="40"
+                    name="bairroPai"
+                    placeholder="Bairro"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="selectEstado">
+                  <select
+                    id="estadoSelect"
+                    name="ufPai"
+                    onChange={e => {
+                      handleInputChange(e)
+                      handleEstadoSelect4(e)
+                    }}
+                  >
+                    <option>Naturalidade: Estado</option>
+                    {estados4.map(estado => (
+                      <option
+                        key={estado.id}
+                        value={estado.nome}
+                        data-id={estado.id}
+                      >
+                        {estado.nome}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="selectCidade">
+                  <select onChange={handleInputChange} name="cidadePai">
+                    <option>Naturalidade: cidade</option>
+                    {cidades4.map(cidade => (
+                      <option
+                        key={cidade.id}
+                        value={cidade.nome}
+                        data-id={cidade.id}
+                      >
+                        {cidade.nome}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="enviar">
+            <button onClick={handleInsert}> Enviar</button>
+          </div>
+        </div>
       </div>
     </>
   )

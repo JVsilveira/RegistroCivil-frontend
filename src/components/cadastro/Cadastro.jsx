@@ -5,8 +5,6 @@ import React, { useState } from "react"
 export default () => {
   const [selectedItem, setSelectedItem] = useState([])
 
-  console.log(selectedItem)
-
   const handleInsert = async () => {
     try {
       await axios.post(

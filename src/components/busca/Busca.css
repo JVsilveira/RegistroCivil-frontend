@@ -247,7 +247,7 @@
   .busca {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 600px;
     width: 1000px;
     border-radius: 16px;
     background: #171717;
@@ -324,10 +324,10 @@
   }
 
   .modal-content {
-    width: 600px;
-    height: 840px;
+    width: 500px;
+    height: 700px;
     background: url(../../assets/imgs/certidão.jpg) no-repeat;
-    background-size: 100%;
+    background-size: 500px;
     border-radius: 16px;
     padding: 20px;
     color: #171717;
@@ -335,21 +335,24 @@
 
   .close {
     font-size: 30px;
-    margin-left: 500px;
+    margin-left: 430px;
+
     cursor: pointer;
   }
 
   .ajusteModal {
-    margin-left: 35px;
-    margin-top: 100px;
+    margin-left: -10px;
+    margin-top: 50px;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    height: 630px;
-    width: 490px;
+    height: 550px;
+    width: 500px;
   }
 
   .modalNome input {
-    width: 190px;
+    width: 150px;
+    height: 15px;
     text-align: center;
   }
 
@@ -357,13 +360,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5px;
     display: flex;
-    width: 100%;
   }
 
   .modalNome {
+    width: 85%;
+    margin-left: 30px;
     display: flex;
+    font-size: 13px;
+    align-items: center;
   }
 
   .modalNaturalidade {
@@ -374,17 +379,17 @@
   }
 
   .modalNaturalidade input {
-    height: 20px;
-    width: 110px;
+    height: 15px;
+    width: 80px;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   .ajusteNaturalidade {
+    display: flex;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .ajusteBeneficio {
@@ -393,9 +398,15 @@
     flex-direction: column;
   }
 
-  .modalNaturalidade div {
+  .modalNaturalidade {
     display: flex;
-    width: 100%;
+    font-size: 13px;
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 80%;
   }
 
   .modalEnderecoObito {
@@ -404,20 +415,24 @@
   }
 
   .modalData {
-    padding: 5px;
+    font-size: 13px;
+    margin-left: 30px;
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 85%;
   }
 
   .modalData input {
     margin-left: 5px;
     text-align: center;
+    height: 15px;
     width: 100px;
   }
 
   .modalData select {
-    margin-left: 15px;
+    margin-left: 25px;
+    font-size: 11px;
+    height: 15px;
     width: 150px;
   }
 
@@ -427,40 +442,48 @@
   }
 
   .modelEspaco {
-    height: 20px;
+    height: 10px;
     width: 100%;
   }
 
   .modelEndereco {
+    font-size: 13px;
     flex-direction: column;
     display: flex;
-    height: 80px;
+    height: 60px;
   }
 
   .modelEndereco input {
+    font-size: 12px;
     text-align: center;
-    width: 150px;
+    height: 15px;
+    width: 120px;
   }
 
   .modelEndereco div {
-    padding-left: 5px;
+    margin-left: 15px;
+    width: 85%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     flex: 1;
   }
 
-  .ajusteModal h2 {
+  .ajusteModal h3 {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
   .modalMaePai input {
-    margin-left: 5px;
+    height: 15px;
+    width: 150px;
+    margin-left: 10px;
   }
 
   .modalMaePai {
-    margin-left: 10px;
+    margin-left: 50px;
+    font-size: 13px;
     display: flex;
     flex-direction: column;
   }
@@ -477,7 +500,9 @@
   }
 
   .modalCasamento {
-    margin-left: 10px;
+    width: 80%;
+    font-size: 13px;
+    margin-left: 40px;
   }
 
   .modalCasamento div {
@@ -486,6 +511,7 @@
 
   .modalCasamento input {
     text-align: center;
+    height: 15px;
     margin-left: 5px;
   }
 }

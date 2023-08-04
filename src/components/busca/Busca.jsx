@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { toast } from "react-toastify"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import "./Busca.css"
 import axios from "axios"
 import { deburr } from "lodash"
-import moment from "moment"
 
 export default () => {
   const [busca, setBusca] = useState("")
@@ -21,6 +20,7 @@ export default () => {
   const nomeDeleteCerto = deburr(nomeDelete)
   const buscaCerta = deburr(busca)
   const nomeCerto = deburr(nome)
+  const moment = require("moment")
 
   const pegaTexto = e => {
     setBusca(e.target.value)
@@ -48,14 +48,14 @@ export default () => {
         console.error("Erro ao obter os dados do backend:", error)
       })
   }
-
+  console.log(selectedItem)
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/atualizar/${nomeCerto}`,
+        `https://registrocivilbackend-joaovitorsantossilveira.b4a.run/${tipo}/atualizar/${nomeCerto}`,
         selectedItem
       )
-      console.log("Dados atualizados com sucesso.")
+      alert("Dados atualizados com sucesso.")
     } catch (error) {
       console.error("Erro ao atualizar os dados:", error)
     }
@@ -317,9 +317,9 @@ export default () => {
                               <input
                                 type="date"
                                 name="dataNascimento"
-                                value={moment(
-                                  selectedItem.dataNascimento
-                                ).format("YYYY-MM-DD")}
+                                value={moment
+                                  .utc(selectedItem.dataNascimento)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -330,9 +330,9 @@ export default () => {
                               <input
                                 type="date"
                                 name="dataObito"
-                                value={moment(selectedItem.dataObito).format(
-                                  "YYYY-MM-DD"
-                                )}
+                                value={moment
+                                  .utc(selectedItem.dataObito)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -508,11 +508,11 @@ export default () => {
                         </div>
                         <div className="modelEspaco"></div>
                       </div>
-                      <div className="modelBotoes">
-                        <button onClick={handlePrint}>Imprimir</button>
-                        <button onClick={handleUpdate}>Atualizar</button>
-                      </div>
                     </form>
+                    <div className="modelBotoes">
+                      <button onClick={handlePrint}>Imprimir</button>
+                      <button onClick={handleUpdate}>Atualizar</button>
+                    </div>
                   </div>
                 </div>
               )}
@@ -583,9 +583,9 @@ export default () => {
                               <input
                                 type="date"
                                 name="dataNascimento"
-                                value={moment(
-                                  selectedItem.dataNascimento
-                                ).format("YYYY-MM-DD")}
+                                value={moment
+                                  .utc(selectedItem.dataNascimento)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -723,9 +723,9 @@ export default () => {
                               <input
                                 type="date"
                                 name="dataNascimento1"
-                                value={moment(
-                                  selectedItem.dataNascimento1
-                                ).format("YYYY-MM-DD")}
+                                value={moment
+                                  .utc(selectedItem.dataNascimento1)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -815,9 +815,9 @@ export default () => {
                               <input
                                 type="date"
                                 name="dataCasamento"
-                                value={moment(
-                                  selectedItem.dataCasamento
-                                ).format("YYYY-MM-DD")}
+                                value={moment
+                                  .utc(selectedItem.dataCasamento)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -835,11 +835,11 @@ export default () => {
                           </div>
                         </div>
                       </div>
-                      <div className="modelBotoes">
-                        <button onClick={handlePrint}>Imprimir</button>
-                        <button onClick={handleUpdate}>Atualizar</button>
-                      </div>
                     </form>
+                    <div className="modelBotoes">
+                      <button onClick={handlePrint}>Imprimir</button>
+                      <button onClick={handleUpdate}>Atualizar</button>
+                    </div>
                   </div>
                 </div>
               )}
@@ -853,7 +853,7 @@ export default () => {
 
                     <form>
                       <div className="ajusteModal">
-                        <h2>CERTIDÃO DE NASCIMENTO</h2>
+                        <h3>CERTIDÃO DE NASCIMENTO</h3>
                         <div className="modelEspaco"></div>
 
                         <div className="modalNome">
@@ -900,10 +900,10 @@ export default () => {
                               Data de nascimento:
                               <input
                                 type="date"
-                                name="dia"
-                                value={moment(
-                                  selectedItem.dataNascimento
-                                ).format("YYYY-MM-DD")}
+                                name="dataNascimento"
+                                value={moment
+                                  .utc(selectedItem.dataNascimento)
+                                  .format("YYYY-MM-DD")}
                                 onChange={handleInputChange}
                               />
                             </label>
@@ -1171,11 +1171,11 @@ export default () => {
                           </div>
                         </div>
                       </div>
-                      <div className="modelBotoes">
-                        <button onClick={handlePrint}>Imprimir</button>
-                        <button onClick={handleUpdate}>Atualizar</button>
-                      </div>
                     </form>
+                    <div className="modelBotoes">
+                      <button onClick={handlePrint}>Imprimir</button>
+                      <button onClick={handleUpdate}>Atualizar</button>
+                    </div>
                   </div>
                 </div>
               )}

@@ -216,7 +216,7 @@ button {
   .nascimento {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 600px;
     width: 1150px;
     border-radius: 16px;
     background: #171717;

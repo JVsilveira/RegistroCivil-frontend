@@ -81,7 +81,9 @@
   .casamento {
     display: flex;
     flex-direction: column;
-    height: 770px;
+    justify-content: center;
+    align-content: center;
+    height: 650px;
     width: 1000px;
     border-radius: 16px;
     background: #171717;
@@ -91,8 +93,8 @@
   }
 
   .txtCasamento {
-    padding-top: 15px;
-    font-size: 30px;
+    padding-top: 10px;
+    font-size: 25px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,7 +107,7 @@
   }
 
   .nubente1 {
-    padding: 15px;
+    padding: 10px;
     border: 1px dotted #fff;
     display: flex;
     flex: 1;
@@ -114,7 +116,7 @@
     justify-content: center;
   }
   .nubente2 {
-    padding: 15px;
+    padding: 10px;
     border: 1px dotted #fff;
     display: flex;
     flex: 1;
@@ -124,7 +126,7 @@
   }
 
   .txtDataCas {
-    padding: 10px;
+    padding: 5px;
   }
 
   .dadosCasamento {
@@ -132,14 +134,14 @@
     display: flex;
     flex: 1;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
   }
 
   .botaoCasamento {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
   }
 
   .dataCasamento {
@@ -154,6 +156,17 @@
   }
 
   .txtDadosCasamento {
-    padding: 15px;
+    padding: 10px;
+  }
+
+  .input2 {
+    border-radius: 16px;
+    text-align: center;
+    font-size: 12px;
+    height: 25px;
+    width: 300px;
+  }
+  div > select {
+    height: 25px;
   }
 }

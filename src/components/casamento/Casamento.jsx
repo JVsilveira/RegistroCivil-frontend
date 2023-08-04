@@ -134,6 +134,7 @@ export default () => {
       console.error("Erro ao inserir os dados:", error)
     }
   }
+
   useEffect(() => {
     fetchEstados()
     fetchEstados2()
@@ -149,8 +150,6 @@ export default () => {
     const value = event.target.value
     setShowInput2(value === "true")
   }
-
-  console.log(selectedItem)
 
   return (
     <>
