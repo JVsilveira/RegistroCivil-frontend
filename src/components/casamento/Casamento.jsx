@@ -131,7 +131,7 @@ export default () => {
       )
       alert("Dados inseridos com sucesso.")
     } catch (error) {
-      console.error("Erro ao inserir os dados:", error)
+      alert("Erro ao inserir os dados: " + console.log(error.response))
     }
   }
 
