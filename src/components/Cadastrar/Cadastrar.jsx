@@ -11,7 +11,7 @@ export default () => {
         "https://registrocivilbackend-joaovitorsantossilveira.b4a.run/signup",
         selectedItem
       )
-      alert("Dados inseridos com sucesso.")
+      alert("Dados inseridos com sucesso")
     } catch (error) {
       alert("Erro ao inserir os dados: " + error.response.data.message)
     }
